@@ -14,14 +14,26 @@
 */
 
 function palindrome(str) {
-    // Напишите код здесь
-}
+    // приводим введенную строку к одному регистру (нижнему, например) 
+    // заменяем все встречающиеся в строке знаки препинания, которые передаем в массиве
+    const string = str.toLowerCase().replace(/[/\s.,!?;]/g, '');
+    // разбиваем строку на массив, обращаем и заново объединяем
+    const check = string.split('').reverse().join('');
+    // сравниваем и возращаем результат сравнения как результат работы функции
+    if (check == string) {
+        return true;
+    } else {
+        return false;
+    }
+};
+
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
 console.log(palindrome('топот')); // должно быть true
 console.log(palindrome('Saippuakivikauppias')); // true
 console.log(palindrome('привет')); // false
+console.log(palindrome('О, лета тело!')); // true
 
 /*
  * Бонус. Задача для любознательных. Пусть функция принимает на вход любую строку,

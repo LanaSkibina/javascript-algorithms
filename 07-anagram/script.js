@@ -9,8 +9,22 @@
 */
 
 function anagram(str1, str2) {
-    // Напишите код здесь
-}
+    if (str1.length !=  str2.length) return false;
+    else {
+        let st1 = str1.toLowerCase();
+        let st2 = str2.toLowerCase();
+
+        if (st1 === st2) return false;
+        else {
+            s1 = st1.split('').sort().join('');
+            s2 = st2.split('').sort().join('');
+            if (s1 != s2) return false;
+            else {
+                return true;
+            }
+        }
+    }
+};
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 

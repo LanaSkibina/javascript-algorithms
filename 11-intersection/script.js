@@ -8,8 +8,14 @@
 */
 
 function intersection(arr1, arr2) {
-    // Напишите код здесь
-}
+    let arr = [];
+    for (const element of arr1) {
+        if (arr2.includes(element) && !arr.includes(element)) {
+          arr.push(element);
+        }
+      }
+      return arr;
+};
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 

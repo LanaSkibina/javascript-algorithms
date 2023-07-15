@@ -8,8 +8,15 @@
  * 
 */
 
-function sumOfTwo(arr, sum) {
-    // Напишите код здесь
+function sumOfTwo(arr, num) {
+    for (let i = 0; i < arr.length; i++) {
+        for (let x = 1 + i; x < arr.length; x++) {
+            if (arr[i] + arr[x] === num) {
+                return true;
+            }
+        }
+      }
+      return false;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

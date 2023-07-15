@@ -6,9 +6,18 @@
  *
 */
 
+
 function capitalize(str) {
-    // Напишите код здесь
-}
+    let reverse = "";
+    for (let i = 0; i < str.length; i++) {
+      const element = str[i];
+      if (str[i - 1] === " " || str[i - 1] === undefined)
+        reverse += element.toUpperCase();
+      else reverse += element;
+    }
+    return reverse;
+  };
+  
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
