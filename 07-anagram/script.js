@@ -11,13 +11,13 @@
 function anagram(str1, str2) {
     if (str1.length !=  str2.length) return false;
     else {
-        let st1 = str1.toLowerCase();
-        let st2 = str2.toLowerCase();
+        let string1 = str1.toLowerCase();
+        let string2 = str2.toLowerCase();
 
-        if (st1 === st2) return false;
+        if (string1 === string2) return false;
         else {
-            s1 = st1.split('').sort().join('');
-            s2 = st2.split('').sort().join('');
+            s1 = string1.split('').sort().join('');
+            s2 = string2.split('').sort().join('');
             if (s1 != s2) return false;
             else {
                 return true;
